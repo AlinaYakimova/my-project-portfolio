@@ -12,21 +12,22 @@
 .menu__item {
   // margin-right: 60px;
   margin-right: 8%;
+  transition: text-shadow .3s;
 
   &:last-child {
     margin-right: 0;
   }
-}
-
-.menu__link {
-  text-decoration: none;
-  white-space: nowrap;
 
   &:hover {
-    font-weight: 600;
+    text-shadow: 0 0 .9px $text-color, 0 0 .9px $text-color;
   }
 
   &:active {
     color: #5500F2;
   }
+}
+
+.menu__link {
+  text-decoration: none;
+  white-space: nowrap;  
 }
