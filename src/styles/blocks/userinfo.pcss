@@ -16,6 +16,7 @@
   color: rgba($text-color, .4);
   font-weight: 600;
   margin-bottom: 20px;
+  
   @include desktop {
     text-align: right;
     margin-bottom: 0;
@@ -25,6 +26,7 @@
   @include tablets {
     text-align: center;
     margin-right: 0;
+  
   }
   @include phones {
     font-size: 14px;
@@ -33,13 +35,21 @@
 }
 
 .userinfo__occ {
-  white-space: pre;
+  white-space: nowrap;
+  display: flex;
+  flex-decoration: column;
+  justify-content: center;
 }
 
 .userinfo__name {
   font-weight: 800;
   font-size: 72px;
   line-height: 1;
+
+  @include tablets {
+    font-size: 48px;
+    max-width: 200px;
+  }
 
   @include phones {
     font-size: 36px;
