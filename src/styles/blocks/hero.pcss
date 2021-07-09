@@ -1,4 +1,5 @@
 .hero {
+  min-height: 650px;
   padding-top: 54px;
   position: relative;
 }
@@ -21,7 +22,11 @@
   }
 
   @include tablets {
-    padding: 0 10% 47%;
+
+    &--close {
+      display: none;
+    }
+    padding: 0 10%;
   }
 }
 
@@ -32,4 +37,8 @@
   right: 0;
   display: flex;
   justify-content: center;
+
+  @include tablets {
+    display: none; 
+  }
 }
