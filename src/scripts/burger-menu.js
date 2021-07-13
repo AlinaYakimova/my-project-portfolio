@@ -37,14 +37,17 @@ function toggleMenu() {
 button.addEventListener("click", toggleMenu);
 
 body.addEventListener("click", (e) => {
+  e.preventDefault();
   const target = e.target;
   const dataValue = target.dataset.scrollTo;
 
-  if (target.classList.contains("hamburger--vortex")) {
-    toggleMenu()
+  if (e.target.classList.contains("hamburger--vortex")) {
+    toggleMenu();
+  } else if ((target.classList.contains("menu__link")) && (document.querySelector('.popup-menu--open'))) {
+    scrollToSection(dataValue);
+    toggleMenu();
   } else if (target.classList.contains("menu__link")) {
     scrollToSection(dataValue);
-    toggleMenu()
   }
 });
 
